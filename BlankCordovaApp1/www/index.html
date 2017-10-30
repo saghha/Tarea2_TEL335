@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+    <!--
+        Personalice la directiva de seguridad de contenido en la etiqueta meta como sea necesario. Agregue "unsafe-inline" a default-src para permitir JavaScript insertado.
+        Para obtener más detalles, consulte http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+               
+        <!--<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">-->
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/3.16.5/math.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+        <script src="https://wzrd.in/standalone/function-plot@1.14.0"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <title>Tarea 2</title>
+    </head>
+<body>
+    <header>
+        <div class="jumbotron text-center">
+            <h1>Tarea 2</h1>
+    </header>
+    <div class="container">
+        <div class="col-md-12 text-center">
+            <div class="col-md-6 col-xs-6">
+                <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="link_polinomio" id="polinomio">Resolver polinomios</button>
+            </div>
+            <div class="col-md-6 col-xs-6">
+                <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="link_triangulo" id="triangulo">Resolver triángulos</button>
+            </div>
+        </div>
+    </div>
+    <section class="container">
+        <div class="col-md-12 text-center invisible" id="titulo">
+            <h1 id="title">titulo</h1>
+            <div class="col-md-12 text-center">
+                <form id="coordenadas">
+                    <label id="first">a
+                        <input class="form-control" type="number" placeholder="X^2" id="a">
+                    </label>
+                    <label id="second">b
+                        <input class="form-control" type="number" placeholder="X" id="b">
+                        <link href="css/index.css" rel="stylesheet" />
+                    </label>
+                    <label id="third">c
+                        <input class="form-control" type="number" id="c">
+                    </label>
+                    <button type=button class="btn btn-primary btn-md" onclick="calcular()">Calcular</button>
+                </form>
+            </div>
+            <p id="test"></p>
+        </div>
+        <div class="coll-md-12">
+            <div class="col-md-6 text-center invisible" id="curva">
+                <div id="plot"></div>
+            </div>
+            <div class="col-md-4 text-center" id="dibujo">
+                <canvas id="results-graph" with="800" height="800"></canvas>
+            </div>
+            <div class="col-md-2 text-center" id="info">
+                <p id="hip"></p>
+                <p id="angulo-inf"></p>
+                <p id="angulo-sup"></p>
+            </div>
+        </div>
+    </section>
+  </body>
+</html>
